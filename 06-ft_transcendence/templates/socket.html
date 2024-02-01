@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+
+<div class="background-game" id="cover">
+  <div id= "tournament-overlay"></div>
+  <br>
+  <div class="row gx-5">
+    <div class="col">
+      <div id='p1-waiting' style="display: block">
+        <div class="friendvsfriendp1">
+          <h1>Waiting for {{ p1.pseudo }} to start the game</h1>
+          <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div id='p1-info' style="display: none">
+        <div id="p1-content" class = "friendvsfriendp1">
+          <h1>{{ p1.pseudo }}</h1>
+          <img class="avatarfriendstat" src="{{ p1.avatar.url }}" alt="Avatar">
+          <p></p>
+          <p>Game played : {{ p1.nb_match }}</p>
+          <p>Victories : {{ p1.nb_victory }}</p>
+          <p>Winning percentage : {{ p1.winrate }}%</p>
+          <!--<p>{{ user.pseudo }}</p>-->
+          {% if user == p1 %}
+          <button class="cancelbtn" id='go-back-button1'>Go back
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5" />
+            </svg>
+          </button>
+          <div class="clearfix" style="display: flex; justify-content: center;">
+            <button class="cancelbtn" id="start1" style="display: block">Set ready</button>
+          </div>
+          {%endif%}
+          {% if user == p2 %}
+          <div id="player1-ready-status">player 1 is <span style="color:#ff8559; font-weight:bold;">not ready</span>
+          </div>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="friendvslogo">
+        <img class="avatarfriendstat" src="/static/assets/vs2.png" alt="versus">
+      </div>
+    </div>
+
+    <div class="col">
+      <div id='p2-waiting' style="display: block">
+        <div class="friendvsfriendp2">
+          <h1>Waiting for {{ p2.pseudo }} to start the game</h1>
+          <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div id='p2-info' style="display: none">
+        <div id="p2-content" class = "friendvsfriendp2">
+          <h1>{{ p2.pseudo }}</h1>
+          <img class="avatarfriendstat" src="{{ p2.avatar.url }}" alt="Avatar">
+          <p></p>
+          <p>Game played : {{ p2.nb_match }}</p>
+          <p>Victories : {{ p2.nb_victory }}</p>
+          <p>Winning percentage : {{ p2.winrate }}%</p>
+          {% if user == p2 %}
+          <button class="cancelbtn" id='go-back-button2'>Go back
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5" />
+            </svg>
+          </button>
+          <div class="clearfix" style="display: flex; justify-content: center;">
+            <button class="cancelbtn" id="start2" style="display: block">Set ready</button>
+          </div>
+          {%endif%}
+          {% if user == p1 %}
+          <div id="player2-ready-status">player 2 is <span style="color:#ff8559; font-weight:bold;">not ready</span>
+          </div>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

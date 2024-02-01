@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<div class="background-profil" class="py-5 bg-image-full" id="cover">
+	<div id ="popup-overlay" class = open>
+	<div class="popup-content">
+		<img class="avatar" src="{{ image_url }}" alt="Avatar">
+		<p>User name : {{ user.username }}</p>
+		<p>Pseudo : {{ user.pseudo }}</p>
+		<p>User email : {{ user.email }}</p>
+		<div class="clearfix"><p>Trophy validation</p></div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-success " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{trophees}}%">{{trophees}}%</div>
+		</div>
+		<p></p>
+		<div class="clearfix">
+			{% if not username_ends_with_42 %}
+				<button id="edit-profile" href="/profileForm" onclick="navigate(event ,'/profileForm')" class="cancelbtn">Modify my profile</button>
+				<button id="change-password" href="/passForm" onclick="navigate(event, '/passForm')" class="cancelbtn">Change my password</button>
+      	<button id="deleteAccountBtn" class="cancelbtn" onclick="deleteAccount()">Delete my account</button>
+      	<p></p>
+      	{% if user.anonymous_mode %}
+    			<button id="anonymize" onclick="anonymize()" class="anonymeon">Anonyme mode on</button>
+				{% else %}
+    			<button id="anonymize" onclick="anonymize()" class="anonymeoff">Anonyme mode off</button>
+				{% endif %}
+				{% if is_2fa_enabled %}
+    			<button id="toggle-2fa-btn" onclick="navigate(event, '/disableTwoFAForm')" class="faenabled">2FA Enabled</button>
+				{% else %}
+    			<button id="toggle-2fa-btn" onclick="navigate(event, '/twoFAForm')" class="fadisabled">2FA Disabled</button>
+				{% endif %}
+			{% endif %}
+			<button class="changeavatarbtn active" id="upload-avatar" href="/avatarForm" onclick="navigate(event, '/avatarForm')">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+				<path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"></path>
+				<path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"></path>
+			</svg></button>
+			<p></p>
+			<button class="cancelbtn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">History</button>
+			<button class="cancelbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Statistics</button>
+		</div>
+	</div>
+	<div class="offcanvas test" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+		<div class="header-stat">
+			<h5 class="offcanvas-title" id="offcanvasExampleLabel">Match results</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="body-stat">
+			<img class="logohistory" src="../static/assets/Ghistory.png" alt="LOGO">
+				<p>{{match_history.content|safe}}</p>
+	  	</div>
+	</div>
+	<div class="offcanvas test2" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+		<div class="header-stat">
+			<h5 id="offcanvasRightLabel">Statistics</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	 	</div>
+		<div class="body-stat">
+			<div class="clearfix">
+				<img class="logohistory" src="../static/assets/statistic.png" alt="LOGO">
+				<p><h2>Games played : {{ user.nb_match }} <br> Victories : {{ user.nb_victory }} <br> Tournaments won : {{ user.tournament_win}}</h2></p>
+				<img class="logohistory" src="../static/assets/trophieslogo.png" alt="LOGO">
+				<p></p>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+				  	<div class="cardbronze">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT1played }}" alt="GoldenTrophie"> : 1 game played </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardsilver">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT10played }}" alt="GoldenTrophie"> : 10 games played </h5> 
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardgold">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT100played }}" alt="GoldenTrophie"> : 100 games played </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardbronze">
+					  	<div class="card-body">
+							<h5> <img class= "trophies" src="{{ trophies_images.imageT1win }}" alt="GoldenTrophie"> : 1 game won </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardsilver">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT10win }}" alt="GoldenTrophie"> : 10 games won </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardgold">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT100win }}" alt="GoldenTrophie"> : 100 games won </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardsilver">
+						<div class="card-body">
+							<h5> <img class= "trophies" src="{{ trophies_images.imageT1tournament }}" alt="GoldenTrophie">  : 1 Tournament won </h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="cardgold">
+						<div class="card-body">
+							<h5><img class= "trophies" src="{{ trophies_images.imageT10tournament }}" alt="GoldenTrophie">  : 10 Tournaments won </h5>
+						</div>
+					</div>
+				</div>
+				<p></p>
+				<p>{% if user.winrate <= 50 %}
+					<div class="class-lost">
+						<h2>You are such a loser only {{ user.winrate }}% of win </h2>
+					</div>
+					<p></p>
+				{% else %}
+					<div class="class-victory">
+						<h2>GG gigachad {{ user.winrate }}% of win </h2>
+					</div>
+					<p></p>
+				{% endif %}</p>
+	  	</div>
+	</div>
+	</div>
+</div>

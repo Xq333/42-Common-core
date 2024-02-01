@@ -1,0 +1,69 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    container_name: db
+    env_file:
+      - .env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: web
+    command: >
+      sh -c "./wait-for-db.sh db &&
+          ./wait-for-vault.sh vault:8200 &&
+          daphne ft_transcendence.asgi:application -u /tmp/sockets/daphne.sock"
+    env_file:
+      - .env
+    environment:
+      VAULT_ADDR: http://vault:8200/
+    volumes:
+      - .:/code
+      - daphne-sockets:/tmp/sockets
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - vault
+
+  apache:
+    build: ./apache
+    container_name: apache
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+    environment:
+      APP_HOST: web:8000
+    volumes:
+      - ./staticfiles:/var/www/html/static
+      - ./media:/media
+      - daphne-sockets:/tmp/sockets
+      - modsecurity:/usr/share/modsecurity-crs
+
+  vault:
+    build: ./vault
+    container_name: vault
+    ports:
+    - "8200:8200"
+    env_file:
+      - .env
+    environment:
+      VAULT_ADDR: http://127.0.0.1:8200/
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - vault-data:/data
+
+volumes:
+  db-data:
+
+  vault-data:
+
+  daphne-sockets:
+
+  modsecurity:

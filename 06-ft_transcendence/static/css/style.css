@@ -1,0 +1,921 @@
+/* Keyframes pour l'animation de luminosité */
+@keyframes brighten {
+  from {
+    filter: brightness(30%);
+  }
+  to {
+    filter: brightness(130%);
+  }
+}
+
+@keyframes backgroundZoom {
+  from { transform: scale(1.00); }
+  to { transform: scale(1.10); }
+}
+
+html, body {
+  overflow: hidden; /* Empêche le défilement sur la page entière */
+  height: 100%; /* Définit la hauteur de la page à la hauteur de la fenêtre du navigateur */
+  width: 100%; /* Définit la largeur de la page à la largeur de la fenêtre du navigateur */
+  background-color: black; /* Couleur de fond noire pour tout l'espace au-delà de l'image */
+}
+
+.background-accueil {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto 
+}
+
+.background-accueil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/accueilPong3.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+
+
+  /* Application de l'animation */
+  animation: brighten 5s infinite alternate;
+}
+
+.background-game {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/gaming.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-friends {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/friendsPong.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-profil {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/profilPong.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-propos {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/aproposPong2.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-contact {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/contactPong.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.background-gamemenu {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+.background-gamemenu::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/menuPong3.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+
+  /* Application de l'animation */
+  animation: backgroundZoom 10s alternate infinite;
+}
+
+
+/* .background-gamemenu {
+  position: relative;
+  background-image: url("../assets/menuPong2.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  animation: backgroundZoom 10s alternate infinite;
+
+} */
+
+.background-image {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/croppedCover.png");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.h1accueil {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  color: white; /* Assurez-vous que la couleur du texte est blanche */
+  -webkit-text-fill-color: white; /* Pour les navigateurs Webkit */
+}
+@media (min-width: 768px) {
+  .h1accueil {
+    
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .h1accueil {
+    width: auto;
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+}
+
+.text-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: vermilion;
+    opacity: 1;
+}
+
+.logo-center {
+    position: fixed;
+    top: 80%;  /* Ajustez ces valeurs pour centrer le logo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;  /* ou la taille que vous souhaitez pour le logo */
+    height: auto;  /* pour maintenir l'aspect ratio */
+    z-index: 10;  /* Assurez-vous que le z-index soit supérieur à celui de l'image de fond mais inférieur au texte */
+}
+
+.logo-center2 {
+  position: fixed; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  text-align: center;
+}
+
+
+/* Assurez-vous que le navbar soit au-dessus de tout */
+.navbar {
+  z-index: 1000;
+  position: relative;
+}
+
+/* Styles supplémentaires si nécessaire pour personnaliser votre navbar */
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white !important; /* Assure que le texte est blanc */
+}
+
+/* Change la couleur du lien actif ou au survol */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.nav-logout {
+  position: relative;
+  display: inline-block; /* Assurez-vous que le lien se comporte comme un élément bloc en ligne */
+}
+
+.nav-logout-text {
+  position: absolute;
+  bottom: -20px; /* Positionne le texte en dessous de l'icône */
+  left: 50%; /* Centre le texte horizontalement */
+  transform: translateX(-50%); /* Ajuste le centrage horizontalement */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  
+  opacity: 0; 
+  visibility: hidden; 
+  transition: visibility 0s, opacity 0.5s linear;
+  transition-delay: 0.5s; 
+}
+
+.nav-logout:hover .nav-logout-text {
+  visibility: visible; 
+  opacity: 1; 
+  transition-delay: 0s; 
+}
+
+@media (max-width: 991px) {
+  .nav-logout-text {
+    position: absolute;
+    top:50%;
+    left: 10%; /* Positionne le texte immédiatement après l'icône */
+    transform: translateY(0); /* Pas besoin de déplacer le texte verticalement s'il est aligné en haut */
+    white-space: nowrap; /* S'assure que le texte ne passe pas à la ligne */
+    visibility: hidden; /* Ces propriétés peuvent être ajustées selon votre transition souhaitée */
+    opacity: 1;
+    transition: visibility 0s linear, opacity 0.5s linear;
+    transition-delay: 0s;
+  }
+  .nav-logout:hover .nav-logout-text {
+    visibility: visible; 
+    opacity: 1; 
+    transition-delay: 0s; 
+  }
+}
+
+
+
+.interrogation-point-text {
+  position: absolute;
+  left: 100%; /* Positionner à droite du point d'interrogation */
+  top: 50%; 
+  transform: translateY(-50%) translateX(0px); /* Centrer verticalement et préparer pour l'animation */
+
+  white-space: pre-wrap; /* Conserver les espaces et retours à la ligne, et permettre l'enveloppement du texte */
+
+  /* Ajuster la largeur du texte en fonction de la largeur de l'écran en pourcentage*/
+  max-width: 50vw;
+
+  background: #1e212a; /* Arrière-plan du texte */
+  color: rgba(0,186,188,0.7);
+  border: 1px solid rgba(0,186,188,0.7); /* Bordure blanche */
+  border-radius: 10px;
+  padding: 5px 10px; /* Padding du texte */
+
+  opacity: 0;
+  visibility: hidden; 
+  transition: visibility 0s linear, opacity 0.5s linear, transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+.bi-question:hover .interrogation-point-text {
+  visibility: visible; 
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clearfix{
+  text-align: center;
+}
+
+.popup-exit{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	text-decoration: none;
+	color: white;
+	background: black;
+	padding: 5px 10px;
+	border-radius: 5px;
+ }
+
+ input {
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+
+.cancelbtn{
+  
+	text-decoration: none;
+  color: rgba(0,186,188,0.7);
+  width: 250px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding: 5px 10px;
+	border-radius: 20px;
+  border: 1px solid rgba(0,186,188,0.7); /* Bordure blanche */
+ }
+ .cancelbtn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+.fadisabled{
+  text-decoration: none;
+  color: white;
+  width: 250px;
+  background-color: rgba(255,0,0,0.4);
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+  }
+  .fadisabled:hover {
+  background-color: rgba(255, 100, 100, 0.511);
+}
+
+.faenabled{
+
+        text-decoration: none;
+  color: white;
+  width: 250px;
+  background-color: rgba(0,255,0,0.4);
+        padding: 5px 10px;
+        border-radius: 20px;
+  border: 2px solid white;
+ }
+ .faenabled:hover {
+  background-color: rgba(100, 255, 100, 0.511);
+}
+
+.deleteaccount{
+
+        text-decoration: none;
+        color: white;
+        width: 250px;
+        background-color: rgba(255,0,0,0.4);
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+       }
+       .fadisabled:hover {
+        background-color: rgba(255, 100, 100, 0.511);
+}
+
+.anonymeoff{
+
+        text-decoration: none;
+        color: white;
+        width: 250px;
+        background-color: rgba(255,0,0,0.4);
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+       }
+       .fadisabled:hover {
+        background-color: rgba(255, 100, 100, 0.511);
+}
+
+.anonymeon{
+
+        text-decoration: none;
+        color: white;
+        width: 250px;
+        background-color: rgba(0,255,0,0.4);
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+       }
+       .faenabled:hover {
+        background-color: rgba(100, 255, 100, 0.511);
+}
+
+ 
+ .startbtn{
+	text-decoration: none;
+  color: rgba(0,186,188,0.7);
+	padding: 5px 10px;
+	border-radius: 20px;
+  background-image: rgba(26, 15, 15, 0.808);
+  border: 1px solid rgba(0,186,188,0.7);;
+ }
+ .startbtn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+.no-transparency {
+  background-color: rgb(26, 15, 15); /* Couleur de fond sans transparence */
+  border: 1px solid rgb(0, 186, 188); /* Couleur de bordure sans transparence */
+  color: rgb(0, 186, 188); /* Couleur du texte sans transparence */
+}
+
+ .logo
+ {
+  height: 30px;
+  width: 30px;
+ }
+
+ .avatar
+ {
+  position: absolute;
+  top: 0%; 
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 2px solid white;
+  @media screen and (max-width: 600px) {
+    top: -20%; 
+  }
+ }
+
+ .changeavatarbtn{
+  position: absolute;
+  top: 15%; 
+  left: 61%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+	text-decoration: none;
+  color: rgba(0,186,188,0.7);
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding: 5px 10px;
+	border-radius: 40px;
+  border: 1px solid rgba(0,186,188,0.7); /* Bordure blanche */
+ }
+
+ .changeavatarbtn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+ .header-stat
+ {
+  text-align: center;
+  background: #1e212ab0;
+  color: white !important;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+  border: 1px solid rgba(0,186,188,0.7);
+
+ }
+
+ .body-stat
+ {
+  text-align: center;
+  flex-grow:1;
+  padding:var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+  overflow-y:auto;
+  background: #1e212a;
+  color: white !important;
+  border: 1px solid rgba(0,186,188,0.7);
+ }
+
+ .class-victory
+ {
+  text-align: center;
+  color: rgb(6, 252, 19) !important;
+ }
+
+ .class-lost
+ {
+  text-align: center;
+  color: rgb(247, 58, 0) !important;
+ }
+
+ .offcanvas.test
+ {
+  top:60px;
+  left:0;
+  width:100%;
+  border-right:var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+  transform:translateX(-100%)
+}
+
+.offcanvas.test2
+{
+  top:60px;
+  right:0;
+  width:100%;
+  border-left:var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+  transform:translateX(100%)
+}
+
+.trophies
+{
+ width: 100%;
+ border-radius: 50%;
+ height: 80px;
+ width: 80px;
+}
+
+.cardgold{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  border-radius: 15px;
+  border: 2px solid rgba(0,186,188,0.7);
+  background-color: rgba(237, 176, 22, 0.51);
+  text-align: center;
+}
+
+.cardsilver{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  border-radius: 15px;
+  border: 2px solid rgba(0,186,188,0.7);
+  background-color: rgba(192, 192, 192, 0.593);
+  text-align: center;
+}
+
+.cardbronze{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  border-radius: 15px;
+  border: 2px solid rgba(0,186,188,0.7);
+  background-color: rgba(96, 52, 24, 0.497);
+  text-align: center;
+}
+
+.cardfriend{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid white;
+  background-color: rgba(96, 52, 24, 0);
+  text-align: center;
+}
+
+.logohistory{
+
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid rgba(0,186,188,0.7);
+  background-color: rgba(96, 52, 24, 0);
+  text-align: center;
+}
+
+.cardhistory{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid rgba(0,186,188,0.7);
+  background-color: rgba(96, 52, 24, 0);
+  text-align: center;
+}
+
+.cancelfriendbtn{
+  
+	text-decoration: none;
+  color: rgb(249, 8, 8);
+  width: auto;
+  background-color: rgba(0, 0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0); /* Black w/ opacity */
+	padding: 5px 10px;
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 0);
+ }
+ .cancelfriendbtn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+.addfriendbtn{
+  
+	text-decoration: none;
+  color: rgb(8, 249, 28);
+  width: auto;
+  background-color: rgba(0, 0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0); /* Black w/ opacity */
+	padding: 5px 10px;
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 0);
+ }
+ .addfriendbtn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
+
+.container {
+  background-color: black;
+  line-height: 1.5;
+  margin: 1rem;
+  padding: 40px 25px;
+}
+
+abbr {
+  font-style: italic;
+  position: relative
+}
+
+abbr:hover::after {
+  color: rgb(5, 5, 5);
+  background-color: rgba(255, 255, 255, 0.806);
+  border-radius: 20px;
+  border: 2px solid rgb(4, 4, 4);
+  bottom: 100%;
+  content: attr(title);
+  display: block;
+  left: 60%;
+  padding: 1em;
+  position: absolute;    
+  width: auto;
+  z-index: 1;
+}
+
+label {
+  display: inline-block;
+  width: 600px; /* Ajustez la largeur en fonction de vos besoins /
+  text-align: left;
+  margin-bottom: 10px;
+}
+input {
+  width: 200px; / Ajustez la largeur en fonction de vos besoins */
+  margin-bottom: 10px;
+}
+
+input {
+  width: 200px; /* Ajustez la largeur en fonction de vos besoins */
+  margin-bottom: 10px;
+}
+
+.input-group-addon i {
+  margin-left: -30px;
+  cursor: pointer;
+  z-index: 200;
+  position: relative;
+  font-size: large;
+  color: #6c757d;
+}
+
+.notification-dropdown {
+  display: none; /* Start hidden */
+  position: absolute;
+  right: 0; /* Align to the right side of the notification icon */
+  background-color: #1e212a; /* Match the navbar color */
+  border: 2px solid white; /* Slight contrast */
+  border-radius: 8px;
+  min-width: 250px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Optional shadow for depth */
+  color: white; /* Text color */
+}
+
+.notification-dropdown a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Keep the text in single lines */
+  color: white; /* Adjust if needed */
+}
+
+.notification-dropdown a:hover {
+  background-color: #34495e; /* Highlight color on hover */
+}
+
+/* Style for the individual notification items */
+.notification-item {
+  display: flex; /* Aligns the items horizontally */
+  justify-content: space-between; /* Aligns the items evenly */
+  align-items: center; /* Aligns the items vertically */
+  padding: 10px;
+  border-bottom: 1px solid white; /* Separator between items */
+}
+
+.notification-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* ajustez cette valeur pour déplacer le triangle vers le haut ou le bas */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #1e212a; /* Match the navbar color */
+}
+
+.notification-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.notification-item button {
+  margin-left: 10px; /* Spacing between text and buttons */
+}
+
+/* /* Style for the Accept/Decline buttons if needed */ */
+/* .notification-item .accept-btn, */
+/* .notification-item .decline-btn { */
+/*   background-color: green; /* For Accept */ */
+/*   color: white; */
+/*   border: none; */
+/*   padding: 5px 10px; */
+/*   cursor: pointer; */
+/* } */
+/**/
+/* .notification-item .decline-btn { */
+/*   background-color: red; /* For Decline */ */
+/* } */
+/**/
+
+.overlay {
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1002; /* Ensure it's above other content */
+}
+
+.flashpopup-overlay-above-all
+{
+	position:fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	background:rgb(6, 6, 6);
+	color: rgb(182, 173, 173);
+	z-index:10001;
+	display: none;
+	overflow-y:scroll !important;
+}
+
+.flash-message {
+  position: fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+  display: none; /* Hidden by default */
+  background-color: #9296a196; 
+  padding: 20px;
+  border: 2px solid white;
+  color : white;
+  z-index: 1003; /* Ensure it's above the overlay */
+}
+
+.flash-message2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block; /* Hidden by default */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #1e212a; 
+  padding: 20px;
+  border: 2px solid white;
+  color : white;
+  z-index: 1006; /* Ensure it's above the overlay */
+}
+
+.flash-message button {
+  min-width: 100px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.flash-message #logout-button {
+  background-color: #4CAF50; /* Green background for confirmation */
+  color: white;
+}
+
+.flash-message #stay-button {
+  background-color: #f44336; /* Red background for cancel */
+  color: white;
+}
+
+
+.logo-login {
+  width: 20px;  /* ou la taille que vous souhaitez pour le logo */
+  height: auto;  /* pour maintenir l'aspect ratio */
+  z-index: 10;  /* Assurez-vous que le z-index soit supérieur à celui de l'image de fond mais inférieur au texte */
+}
+
+.login42btn{
+  
+	text-decoration: none;
+  color: white;
+  width: 250px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(0, 0, 0); /* Black w/ opacity */
+	padding: 5px 10px;
+	border-radius: 20px;
+ }
+ .login42btn:hover {
+  background-color: rgba(236, 231, 231, 0.511); /* Nouvelle couleur au survol */
+}
+
+.avatarfriendstat
+{
+ border-radius: 50%;
+ height: 200px;
+ width: 200px;
+ border: 2px solid white;
+}
+
+.listfriend{
+  padding: 15px 5px;
+  margin-left:0;
+  border-left:0;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 252, 251, 0.486);
+}
+
+.listfriendsli{
+  width: 100%;
+  max-height: 50px;
+  color:#000
+}
+.listfriendsli:hover{
+  background-color: #1e212a;
+  color:rgba(0,186,188,0.7);
+  }
+
+  .outlined-text {
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  

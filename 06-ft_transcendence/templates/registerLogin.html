@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% load static %}
+
+<form id="registerFormular" style="display: block">
+  {% csrf_token %}
+  <div id="popup-overlay-above-all" class=open>
+    <div class="popup-content-register">
+      <div class="row gx-5">
+        <div class="col">
+          <article class="card-body mx-auto" style="max-width: 400px;">
+            <h3 class="card-title mt-3 text-center">Create Account</h3>
+            <p class="text-center">Register to play</p>
+            <hr class="mx-n3">
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                  </svg>
+                  <i class="fa fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+            </div>
+            <p></p>
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-person-badge" viewBox="0 0 16 16">
+                    <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path
+                      d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z" />
+                  </svg>
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Enter Pseudo" name="pseudo" required>
+              <div class="input-group-addon">
+                <i class="bi bi-question"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
+                    <path
+                      d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
+                  </svg>
+                  <span class="interrogation-point-text">Pseudo Anonyme</span>
+                </i>
+              </div>
+            </div>
+            <p></p>
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                    <path
+                      d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
+                  </svg>
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+            </div>
+            <p></p>
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                  </svg>
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+              <div class="input-group-addon">
+                <i class="bi bi-question">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
+                  </svg>
+                  <span class="interrogation-point-text">Information:
+                    - Minimum 8 characters
+                    - 1 special character
+                    - 1 capital letter
+                    - 1 lower case
+                    - 1 number</span>
+                </i>
+              </div>
+            </div>
+            <p></p>
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+
+                  </svg>
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" placeholder="Repeat Password" name="password2" required>
+            </div>
+            <p></p>
+            <hr class="mx-n3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="dataConsent" value="" name="dataConsent" required>
+              <label class="form-check-label" for="dataConsent">I agree to the use of my data <br>for the proper
+                functioning of the site.<br>
+                <div class="form-group">
+                  <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">See our privacy policy</a>
+                </div>
+              </label>
+            </div>
+            <div id="privacyPolicyContent" style="display: none;">
+              <div class="popup-content-register">
+                <h3>Your Privacy and the Use of Your Data on Transcendence</h3>
+                <p>
+                  At Transcendence, we take your privacy seriously. Here's how we manage your personal data:<br><br>
+                  <strong>Why We Collect Your Data :</strong><br>
+                  We collect basic information such as your e-mail address and username to provide you with a
+                  personalized and secure experience on our site. This data is essential to access our services.<br><br>
+                  <strong>Your Consent :</strong><br>
+                  By creating an account, you consent to the collection and use of this data for the operation of the
+                  site. We will not use your data for any other purpose without your explicit consent.<br><br>
+                  <strong>Withdrawal of Consent and Account Deletion :</strong><br>
+                  You have the right to withdraw your consent at any time. However, as your personal data is essential
+                  for the use of our service, withdrawing your consent will be equivalent to requesting the deletion of
+                  your account. If you decide to delete your account, all your personal data will be securely deleted
+                  from our systems in accordance with the GDPR. This means that you will no longer be able to access the
+                  service.<br><br>
+                  <strong>Security of Your Data :</strong><br>
+                  We take strict measures to ensure the security and confidentiality of your data. It is stored securely
+                  and is only accessible for the purposes of the site.<br><br>
+                  If you have any questions or concerns about your data, please do not hesitate to contact us at
+                  transcendence@support.com.
+                </p>
+                <a href="javascript:void(0);" class="popup-exit" onclick="togglePrivacyPolicy()">Close</a>
+              </div>
+            </div>
+            <div class="clearfix">
+              <button id="submit-register" type="submit" class="cancelbtn">Sign Up</button>
+              <button onclick="auth42()" class="login42btn"><img class="logo-login"
+                  src="../static/assets/42_Logoblanc.png">&emsp; Login with 42</button>
+              <p></p>
+              <span>Already have an account?</span>
+              <a id="loginswitch" href="/login">Login</a>
+            </div>
+          </article>
+        </div>
+        <div class="col resizeimgregister">
+          <img src="/static/assets/pong2.webp" alt="Sample photo" class="registetimg">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<form id="loginFormular" style="display: none">
+  {% csrf_token %}
+  <div id="popup-overlay-above-all" class=open>
+    <div class="popup-content-login">
+      <div class="row gx-5">
+        <div class="col">
+          <article class="card-body mx-auto" style="max-width: 400px;">
+            <p></p>
+            <h3 class="card-title mt-3 text-center">Login</h3>
+            <p class="text-center">Connect to your account</p>
+            <hr class="mx-n3">
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                  </svg>
+                  <i class="fa fa-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+            </div>
+            <p></p>
+            <div class="form-group input-group"> <!-- form-group// -->
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-key-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                  </svg>
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+            </div>
+            <div id="otp-field" style="display: none;">
+              <div class="input-group-prepend">
+                <hr class="mx-n3">
+                <label for="otp"><b>OTP :</b></label><br>
+              </div>
+              <input type="text" class="form-control" placeholder="Enter OTP" name="otp" />
+              <p></p>
+              <!-- Button to submit OTP -->
+              <div class="clearfix">
+                <button type="button" class="cancelbtn" onclick="submitOTP()">Verify OTP</button>
+              </div>
+            </div>
+            <hr class="mx-n3">
+            <p></p>
+            <div class="clearfix">
+              <div id="show" style="display: block;">
+                <button id="submit-login" type="submit" class="cancelbtn">Login</button>
+                <button onclick="auth42()" class="login42btn"><img class="logo-login"
+                    src="../static/assets/42_Logoblanc.png">&emsp; Login with 42</button>
+              </div>
+              <div id="register-switch">
+                <p></p>
+                <span>Don't have an account?</span>
+                <a id="registerswitch" href="/register">Register</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col resizeimglogin">
+          <p></p>
+          <img src="/static/assets/ponglogin.png" alt="Sample photo" class="registetimg">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,146 @@
+version: '3.8'
+services:
+  mariadb:
+    container_name: mariadb
+    build:
+      ./requirements/mariadb/
+    image: mariadb
+    expose:
+      - "3306"
+    networks:
+      - inception
+    env_file:
+      - .env
+    volumes:
+      - mariadb:/var/lib/mysql
+    restart: on-failure
+
+  nginx:
+    container_name: nginx
+    build:
+      ./requirements/nginx
+    image: nginx
+    ports:
+      - "443:443"
+    networks:
+      - inception
+    env_file:
+      - .env
+    volumes:
+      - wordpress:/var/www
+    restart: on-failure
+    depends_on:
+      - wordpress
+
+  redis:
+    container_name: redis
+    build:
+      ./requirements/bonus/redis
+    image: redis
+    networks:
+      - inception
+    restart: on-failure
+
+  wordpress:
+    container_name: wordpress
+    build:
+      ./requirements/wordpress
+    image: wordpress
+    expose:
+      - "9000"
+    networks:
+      - inception
+    env_file:
+      - .env
+    volumes:
+      - wordpress:/var/www
+    restart: on-failure
+    depends_on:
+      - mariadb
+      - redis
+
+  ftp:
+    container_name: ftp
+    build:
+      ./requirements/bonus/ftp
+    image: ftp
+    depends_on:
+      - wordpress
+    ports:
+      - "21:21"
+      - "40000-40100:40000-40100"
+    env_file:
+      - .env
+    volumes:
+      - wordpress:/var/www
+    networks:
+      - inception
+    restart: on-failure
+
+  adminer:
+    container_name: adminer
+    build:
+      ./requirements/bonus/adminer
+    image: adminer
+    depends_on:
+      - mariadb
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    networks:
+      - inception
+    restart: on-failure
+
+  statik:
+    container_name: statik
+    build:
+      ./requirements/bonus/statik
+    image: statik
+    ports:
+      - "8000:8000"
+    networks:
+      - inception
+    restart: on-failure
+
+  backups:
+    container_name: backups
+    build:
+      ./requirements/bonus/backups
+    image: backups
+    networks:
+      - inception
+    volumes:
+      - backups:/backups
+    depends_on:
+      - mariadb
+    env_file:
+      - .env
+    #restart: on-failure
+
+networks:
+  inception:
+    driver: bridge
+
+volumes:
+  wordpress:
+    driver: local
+    name: wordpress
+    driver_opts:
+      type: bridge
+      o: bind
+      device: /home/pfaria-d/wordpress
+  mariadb:
+    driver: local
+    name: mariadb
+    driver_opts:
+      type: bridge
+      o: bind
+      device: /home/pfaria-d/mariadb
+  backups:
+    driver: local
+    name: backups
+    driver_opts:
+      type: bridge
+      o: bind
+      device: /home/pfaria-d/backups

@@ -1,0 +1,17 @@
+<div class="background-profil" class="py-5 bg-image-full" id="cover">
+    <div id="popup-overlay" class="open">
+        <div class="popup-2fa">
+            <h1>2FA</h1>
+            <p>Scan this QR code with Google Authenticator</p>
+            <div>Your secret key: <span id="secret-key-display"><b>{{ secret_key }}</b></span></div>
+            <div id="qr-code-container">
+                {% if qr_code %}
+                <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+                {% endif %}
+            </div>
+            <input type="text" name="otp_token" placeholder="Enter OTP">
+            <button type="button" onclick="confirm2FA()" class="cancelbtn">Confirm 2FA</button>
+            <a class="popup-exit" onclick="navigate(event,'/profile')">Close</a>
+        </div>
+    </div>
+</div>

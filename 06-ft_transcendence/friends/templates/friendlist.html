@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- {% extends 'main.html' %} -->
+<!-- {% load static %} -->
+<!-- {% block content %} -->
+<div class="background-friends" id="cover">
+  <div id="content">
+    <div id="popup-overlay" class=open>
+      <div class="popup-content">
+        <div class="clearfix">
+          <button id='add-friend-button' class='cancelbtn'>Add Friend</button>
+        </div>
+        <div id='search-friend-bar' style='display:none'>
+          <div class="form-group input-group"> <!-- form-group// -->
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+            <input type='text' class="form-control form-input" id='search-friend-input'
+              placeholder='Search for a friend'>
+          </div>
+          <div class="listfriend" id="show-droppout" style='display:none'>
+            <ul id='search-friend-results-list'></ul>
+          </div>
+        </div>
+        <hr class="mx-n3">
+        <div class="row gx-5">
+          <div class="col">
+            <div id='user-friendlist'></div>
+          </div>
+          <div class="col">
+            <div id='profile-container'>
+              Click on a friend or a user you want to add to view their profile displayed here!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- {% endblock %} -->

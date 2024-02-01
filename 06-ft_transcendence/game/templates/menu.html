@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	{% csrf_token %}
+<div class="background-gamemenu" class="py-5 bg-image-full" id="cover">
+	<div id="popup-overlay" class=open>
+		<div class="popup-content">
+			<div class = "clearfix">
+				<h1 >Welcome to Pong</h1>
+				<h2>Here are the rules of the game</h2>
+				<p>The aim of the game is to get the ball into the opponent's half.</p>
+				<p>The ball bounces back onto the paddle.</p>
+				<p>The player who first scores 10 points wins the game.</p><br>
+				<h2>Please choose your game mode</h2>
+				<div id="game-buttons">
+					<button id="localgame" href="/local-game" onclick="startLocalGame()" class="cancelbtn">Local Game</button>
+					<button id="onevone" href="/onevsone-choice" onclick="oneVsOneButtons()" class="cancelbtn">Multiplayer Game</button>
+					<button id="onevbot" href="/onevsbot-choice" onclick="startGamebot()" class="cancelbtn">Bot Game</button>
+					<button id="tournament" href="/tournament-choice" onclick="tournamentMenu()" class="cancelbtn">Tournament Multiplayer Game</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

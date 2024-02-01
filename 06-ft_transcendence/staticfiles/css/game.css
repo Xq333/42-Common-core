@@ -1,0 +1,324 @@
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(3); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes squash {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: scaleX(0.4) scaleY(1.6); /* Aplatissement vertical et élargissement horizontal */
+  }
+}
+
+@keyframes colorChange {
+  0% { background-color: rgba(0, 186, 188, 0.7); }
+  50% { background-color: rgba(11, 180, 161, 0.7); }
+  100% { background-color: rgba(0, 186, 188, 0.7); }
+}
+
+#pong {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/croppedCover.png");
+  background: linear-gradient(to right, #1e212a, #073238, #1e212a);
+  background-size: 300% 300%;
+  border: 2px solid rgba(0,186,188,0.7);
+  top: 50%;
+	left: 0%;
+	/* transform: translate(0%,0%); */
+  position: relative;
+  width: 80vw; /* Largeur du jeu */
+  height: 45vw; /* Hauteur du jeu */
+  margin: auto;
+  animation: backgroundMove 30s linear infinite;
+}
+
+.paddle {
+  position: absolute;
+  width: 2%; /* Ajuster selon le besoin */
+  height: 20%; /* Ajuster selon le besoin */
+  background: rgba(0,186,188,0.7);
+  border-radius: 20px;
+  transition: fadeIn 1s ease-in-out; /* Animation d'apparition */
+  box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.4); /* Ombre plus petite et subtile */
+  animation: colorChange 2s linear infinite;
+}
+
+#paddleA {
+  left: 1%; /* Position de la raquette gauche */
+}
+
+#paddleB {
+  right: 1%; /* Position de la raquette droite */
+}
+
+#ball {
+  position: absolute;
+  width: 1.5%;
+  height: 1.5%;
+  background-image: radial-gradient(circle at 30% 30%, #00babc, #1e212a);
+  border-radius: 50%;
+  /* ombre uniforme  */
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.7);
+  animation: rotate 1s linear infinite;
+}
+
+.score {
+  position: absolute;
+  font-size: 1.6vw; /* Taille de la police relative à la largeur de la vue */
+  color:  rgba(0,186,188,0.7);
+  font-family: 'Arial', sans-serif;
+}
+
+#scoreA {
+  left: 30%;
+}
+
+#scoreB {
+  right: 30%;
+}
+
+/* graph */
+#graphContainer {
+  background: linear-gradient(to right, #1e212a, #073238, #1e212a);
+  background-size: 300% 300%;
+  border-radius: 10px;
+  border: 2px solid rgba(0,186,188,0.7);
+  top : 50%;
+  left: 0%;
+  position: relative;
+
+  width: 100% ; /* Largeur du jeu */
+  height : max-content; /* Hauteur du jeu */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px auto 30px auto;
+  z-index: 1; /* Pour que le conteneur soit au-dessus du jeu */
+  
+  animation: backgroundMove 30s linear infinite;
+
+}
+
+
+#echangesGraph {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  width: 90%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px; /* Ajout de la marge inférieure de 30px */
+}
+
+#victoiresGraph {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background:  #1e212a;
+}
+
+.echangesTitle, .victoiresTitle {
+
+  text-decoration: underline;
+  margin: 18px 0;
+  color: rgb(255, 255, 255);
+  font-family: 'Arial', sans-serif;
+
+}
+
+.bar {
+  margin: 0 5px;
+  position: relative;
+}
+
+.bar span {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  color: #fff;
+  font-size: 12px;
+}
+
+#victoiresGraph {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #1e212a;
+}
+
+#victoiresContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#victoiresLegend {
+  position: absolute;
+  left: -120px; /* Ajustez en fonction de la taille de votre légende */
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.legend-item {
+  /* align to the left */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.legend-color-bot {
+  background-color: rgba(0,186,188,0.7);
+}
+
+.legend-color-joueur {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.legend-text {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+}
+
+/* create texte for rules */
+
+#rulesText {
+  color: white; /* Couleur du texte */
+  background: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+  padding: 15px; /* Espace intérieur */
+  border-radius: 10px; /* Bords arrondis */
+  text-align: center; /* Alignement du texte */
+  font-size: 1.2em; /* Taille de la police */
+  box-shadow: 0px 0px 10px 3px rgba(0, 186, 188, 0.7); /* Ombre portée */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  animation: fadeOut 5s ease-in-out; /* Animation de disparition */
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out;
+}
+
+.squash {
+  animation: squash 0.5s ease;
+}
+{margin: 0; padding: 0;}
+
+.tree ul {
+    padding-top: 20px; position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li {
+  min-width: 60px;
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; top: 0; right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%; height: 20px;
+}
+.tree li::after{
+    right: auto; left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child{ padding-top: 0;}
+
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+
+.tree li:last-child::before{
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0; height: 20px;
+}
+
+.tree li a{
+  min-width: 60px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    display: inline-block;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}

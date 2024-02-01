@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	{% csrf_token %}
+<div class="background-profil" class="py-5 bg-image-full" id="cover">
+	<div id="popup-overlay" class=open>
+		<div class="popup-content">
+			<div class="clearfix">
+				<h1>Avatar</h1>
+			</div>
+			<p>Choose a file to upload to modify the avatar</p>
+			<form id="avatarForm" action="/api/submit-avatar" method="POST">
+                <input type="file"  class="form-control" name="avatar" id="avatar_id" required="">
+				<p></p>
+				<div class="clearfix">
+					<button type="submit" class="cancelbtn">Submit</button>
+				</div>	
+			</form>
+			<a class="popup-exit" onclick="navigate(event,'/profile')">Close</a>
+		</div>
+	</div>
+</div>

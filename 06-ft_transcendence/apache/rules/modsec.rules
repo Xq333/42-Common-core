@@ -1,0 +1,28 @@
+# Redirect to a different page when a PHP file is uploaded
+SecRule FILES "(?i)\.php$" "t:none,log,redirect:http://cyberis.co.uk,msg:'PHP file upload blocked',id:1"
+
+# Deny when a semi-colon is found in the 'ip' parameter
+SecRule ARGS:ip ";" "t:none,log,deny,msg:'semi colon test',id:2"
+
+
+# Disable ModSecurity for a given page - NOTE THE ESCAPE OF THE '?'
+SecRule REQUEST_URI "/joomla/index.php/component/users/\?task=registration.register" "allow,id:3"
+
+
+# Fix a rule (add an exception for the password field)
+SecRule REQUEST_COOKIES|!REQUEST_COOKIES:/__utm/|REQUEST_COOKIES_NAMES|ARGS_NAMES|ARGS|!ARGS:/jform\[password[12]\]/|XML:/* "(^[\"'`´’‘;]+|[\"'`´’‘;]+$)" "phase:2,rev:'2',ver:'OWASP_CRS/2.2.8',maturity:'9',accuracy:'8',capture,t:none,t:urlDecodeUni,block,msg:'SQL Injection Attack: Common Injection Testing Detected',id:'4',logdata:'Matched Data: %{TX.0} found within %{MATCHED_VAR_NAME}: %{MATCHED_VAR}',severity:'2',tag:'OWASP_CRS/WEB_ATTACK/SQL_INJECTION',tag:'WASCTC/WASC-19',tag:'OWASP_TOP_10/A1',tag:'OWASP_AppSensor/CIE1',tag:'PCI/6.5.2',setvar:'tx.msg=%{rule.msg}',setvar:tx.sql_injection_score=+%{tx.critical_anomaly_score},setvar:tx.anomaly_score=+%{tx.critical_anomaly_score},setvar:tx.%{rule.id}-OWASP_CRS/WEB_ATTACK/SQL_INJECTION-%{matched_var_name}=%{tx.0}"
+#...then disable the rule
+SecRuleRemoveById 981318
+
+# An alternative way of donig the same thing (preferred approach) - update an existing rule. NB: target refers to the data which a pattern match is performed against, i.e. the second parameter in a rule:
+SecRuleUpdateTargetById 981318 "!ARGS:/jform\[password[12]\]/"
+
+# white-list the user parameter for rule #981260 only when the REQUEST_URI is /index.php...
+SecRule REQUEST_URI "@beginsWith /index.php/component/users/" "id:5,phase:1,t:none,pass,nolog,ctl:ruleRemoveTargetById=981318;ARGS:/jform\[password[12]\]/"
+
+# Only allow letters in username field - note the use of phase:2 here, as you are inspecting the request body (a form field)
+SecRule ARGS:/jform\[username\]/ "[^a-zA-Z]" "t:none,phase:2,deny,id:6,log,msg:'test for whitelist rule'"
+
+# Only allow certain charcters in the username field for a specific URL
+SecRule REQUEST_URI "@beginsWith /joomla/index.php/component/users/" "phase:2,id:7,deny,log,chain,msg:'test for whitelist rule, on specific URI'"
+ SecRule ARGS:/jform\[username\]/ "[^a-zA-Z]"

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	{% csrf_token %}
+<div class="background-profil" class="py-5 bg-image-full" id="cover">
+	<div id="popup-overlay" class=open>
+		<div class="popup-content">
+			<div class = "clearfix">
+				<h1>Profile</h1>
+			</div>
+			<p><h3>Profile information</h3></p>
+			<form id="profileForm" action="/api/submit-profile" method="POST">
+				<label for="username_id"><h5>Username</h5></label>
+				<input type="text" class="form-control" value= "{{ user.username }}" name="username" id="username_id" required>
+				<p></p>
+				<label for="pseudo_id"><h5>Pseudo</h5></label>
+				<input type="text" class="form-control" value= "{{ user.pseudo }}"name="pseudo" id="pseudo_id" required>
+				<p></p>
+				<label for="email_id"><h5>Email address</h5></label>
+				<input type="email" class="form-control" value= "{{ user.email }}"name="email" id="email_id" required>
+				<p></p>
+				<div class = "clearfix">
+					<button type="submit" class="cancelbtn">Submit</button>
+				</div>
+			</form>
+			<a class="popup-exit" onclick="navigate(event,'/profile')">Close</a>
+		</div>
+	</div>
+</div>

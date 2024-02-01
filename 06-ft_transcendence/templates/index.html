@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="background-accueil" class="py-5 bg-image-full" id="cover">
+  <div id="content">
+    {% include 'registerLogin.html' %}
+    <div id="messageSucces" style="display: none;">
+      Thank you for your interest! Your registration form has been successfully submitted.
+    </div>
+  </div>
+</div>
+<script>
+  function check42() {
+    document.getElementById("submit-login").disabled = true;
+    document.getElementById("logout").style.display = "block";
+    printFlashMessage("You successfully logged in");
+    history.pushState(null, "", "/accueil");
+    localStorage.removeItem("42");
+    document.removeEventListener("DOMContentLoaded", listenerLogin42);
+    loadHomePage();
+  }
+  function listenerLogin42() {
+    if (localStorage.getItem("42")) {
+      check42();
+    }
+    else {
+      document.removeEventListener("DOMContentLoaded", listenerLogin42);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", listenerLogin42); 
+</script>
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="bar" style="background: #1e212a;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item ">
+          <a class="nav-link nav-logout" href="/accueil">
+            <img class="logo" src="../static/assets/favicon.ico" alt="LOGO">
+            <span class="nav-logout-text">Home</span>
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/game">Play</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/apropos">About</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/friends">Friends</span></a></li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link exclude-click nav-logout" href="/notifs">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+            </svg>
+            <span class="nav-logout-text">Notifications</span>
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/profile">Profile</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-logout" id="logout" href="/logout">
+            <img class="logo" src="../static/assets/power-off.png" alt="LOGO">
+            <span class="nav-logout-text">Logout</span>
+          </a>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id='notification' class='notification-dropdown'></div>
+<div id="flash-overlay" class="overlay">
+  <div id="flash-message" class="flash-message"></div>
+</div>

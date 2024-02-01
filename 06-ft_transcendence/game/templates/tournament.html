@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+	{% csrf_token %}
+	<div id="popup-overlay" class=open>
+		<div class="popup-content">
+			<div class = "clearfix">
+				<h1>Welcome to Tournament Mode</h1>
+				<p>Tournaments are held in 2 elimination rounds.</p>
+				<p>The keys to play are as follows:</p>
+				<p>E to go up and D to go down</p>
+				<h2>May the best player win!</h2>
+				<div id="game-buttons">
+					<button id="onevbot" onclick="checkTournament()" class="cancelbtn">Start tournament</button>
+                	<button id="retourmenu" href="/game" onclick="loadMenuPage()" class="cancelbtn">Return to menu</button>
+				</div>
+			</div>
+		</div>
+	</div>
