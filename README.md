@@ -60,7 +60,7 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 - **Description** : Projet axé sur les algorithmes de tri, où j'ai dû développer un programme capable de trier des données avec un ensemble limité d'opérations, optimisant l'efficacité et la performance.
 - **Compétences** : Algorithmique, optimisation, résolution de problèmes.
 
-## Mes Projets à l'École 42 et Leurs Notes
+## 📈 Mes Projets à l'École 42 et Leurs Notes
 
 | Projet            | Note                               |
 |-------------------|------------------------------------|
