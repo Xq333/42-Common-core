@@ -48,3 +48,4 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 
 N'hésite pas à explorer les répertoires de chaque projet pour plus de détails sur mon travail et les compétences développées. Merci de votre intérêt pour mon parcours à l'école 42!
 
+[![pfaria-d's 42 minishell Score](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939864)](https://github.com/Coday-meric/badge42)
