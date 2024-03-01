@@ -2,15 +2,33 @@
 
 Bienvenue sur mon dépôt GitHub où je partage les projets que j'ai réalisés pendant mon temps à l'école 42. Ce parcours a été une aventure incroyable, m'offrant une profonde compréhension de la programmation, du développement logiciel, et de la résolution de problèmes complexes.
 
+## Table des Matières
+- [🚀 Mon Parcours à l'École 42](#-mon-parcours-à-lécole-42)
+- [📚 Apprentissages Clés](#-apprentissages-clés)
+- [🌟 Projets Phares](#-projets-phares)
+- [📈 Mes Projets à l'École 42 et Leurs Notes](#-mes-projets-à-lécole-42-et-leurs-notes)
+- [📖 Explorer Plus](#-explorer-plus)
+- [📩 Comment Me Contacter](#-comment-me-contacter)
+
 ## 📚 Apprentissages Clés
 
-Tout au long de ce parcours, j'ai acquis des compétences fondamentales qui m'ont préparé à relever n'importe quel défi technique dans le futur :
+Au cours de mon parcours à l'école 42, j'ai non seulement acquis une solide base technique dans divers domaines de l'informatique, mais j'ai également développé une approche méthodique pour résoudre des problèmes complexes et travailler efficacement en équipe. Voici les compétences et les connaissances que j'ai pu développer :
 
-- **Programmation Système et Réseau** : Maîtrise du C, des sockets, et de la programmation bas niveau.
-- **Développement Web Full Stack** : Création d'applications web dynamiques en utilisant des frameworks modernes et la gestion de bases de données.
-- **Conception et Gestion de Projets** : Expérience dans la conception, le développement et la gestion de projets complexes, en solo et en équipe.
-- **Principes de la Cybersécurité** : Application des meilleures pratiques de sécurité dans le développement logiciel.
-- **Conteneurisation et Orchestration** : Utilisation de Docker et de docker-compose pour déployer des applications de manière efficace et isolée.
+- **Programmation Système et Réseau** : Profonde compréhension des principes de la programmation système en C, y compris la gestion des processus et la communication inter-processus, ainsi que des compétences avancées en programmation réseau, permettant de créer et de gérer des connexions sécurisées et efficaces.
+
+- **Développement Web Full Stack** : Développement d'applications web complètes, de la gestion de la base de données et du serveur backend jusqu'à la création d'interfaces utilisateur dynamiques, en utilisant des technologies de pointe et des frameworks modernes.
+
+- **Conception et Gestion de Projets** : Expérience approfondie dans la planification, le développement, et la livraison de projets logiciels complexes, avec une forte emphase sur les méthodologies agiles et le travail d'équipe, assurant une collaboration efficace et une haute qualité de code.
+
+- **Principes de la Cybersécurité** : Application rigoureuse des meilleures pratiques de sécurité pour protéger les données et les systèmes contre les vulnérabilités, avec une attention particulière à la sécurisation des applications web et des réseaux.
+
+- **Conteneurisation et Orchestration** : Maîtrise des technologies de conteneurisation comme Docker, et compétences en orchestration avec docker-compose, facilitant le déploiement et la gestion d'applications scalables et résilientes.
+
+- **Algorithmique et Structures de Données** : Solide compréhension des algorithmes classiques et des structures de données, permettant d'optimiser la performance et l'efficacité des solutions logicielles développées.
+
+- **Graphisme et Visualisation de Données** : Capacité à créer des visualisations graphiques interactives et à implémenter des interfaces utilisateur intuitives, améliorant l'expérience utilisateur et facilitant la compréhension des données complexes.
+
+Ces compétences, acquises à travers une série de projets pratiques et défis techniques, m'ont préparé à aborder sereinement les problèmes informatiques les plus ardus et à contribuer efficacement à des projets technologiques innovants.
 
 ## 🌟 Projets Phares
 
