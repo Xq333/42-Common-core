@@ -34,31 +34,31 @@ Ces compétences, acquises à travers une série de projets pratiques et défis 
 
 Voici une sélection de mes projets préférés réalisés à l'école 42, illustrant la diversité de mes compétences et intérêts :
 
-### 1. Minishell 🐚
+### 1. minishell 🐚
 - **Description** : Réalisation d'un shell Unix minimaliste. Ce projet m'a permis de comprendre en profondeur le fonctionnement des interpréteurs de commandes et la gestion des processus sous Unix.
 - **Compétences** : Programmation en C, gestion de processus, interprétation de commandes.
 
-### 2. Philosophers 🍽
+### 2. philosophers 🍽
 - **Description** : Implémentation du problème classique du dîner des philosophes en utilisant le multithreading et la synchronisation pour éviter les deadlocks et les race conditions.
 - **Compétences** : Multithreading, synchronisation, problèmes de concurrence.
 
-### 3. FT_Transcendence 🎮
+### 3. ft_transcendence 🎮
 - **Description** : Développement d'une plateforme web complexe offrant des jeux en temps réel et un système de chat. Ce projet a été une introduction complète au développement web full stack.
 - **Compétences** : Full Stack Web Development, WebSockets, gestion de bases de données.
 
-### 4. FT_IRC 💬
+### 4. ft_irc 💬
 - **Description** : Création d'un serveur IRC from scratch, ce qui m'a permis de plonger dans les détails de la programmation réseau et de la gestion de multiples clients en simultané.
 - **Compétences** : Programmation réseau, gestion de clients, protocoles de communication.
 
-### 5. Inception 🏗
+### 5. inception 🏗
 - **Description** : Mise en place d'une architecture microservices à l'aide de conteneurs Docker, simulant une application web complexe et ses dépendances.
 - **Compétences** : Docker, docker-compose, architecture microservices.
 
-### 6. Netpractice 🌐
+### 6. netpractice 🌐
 - **Description** : Série d'exercices pratiques centrés sur la compréhension et la mise en œuvre des principes fondamentaux des réseaux informatiques. Ce projet a renforcé ma capacité à configurer et à résoudre des problèmes de réseau, offrant une base solide en matière de technologies de communication.
 - **Compétences** : Configuration réseau, diagnostic de problèmes, fondamentaux des protocoles de réseau.
 
-### 7. Push_swap 🔁
+### 7. push_swap 🔁
 - **Description** : Projet axé sur les algorithmes de tri, où j'ai dû développer un programme capable de trier des données avec un ensemble limité d'opérations, optimisant l'efficacité et la performance.
 - **Compétences** : Algorithmique, optimisation, résolution de problèmes.
 
