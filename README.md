@@ -7,8 +7,6 @@ Bienvenue sur mon dépôt GitHub où je partage les projets que j'ai réalisés 
 - [📚 Apprentissages Clés](#-apprentissages-clés)
 - [🌟 Projets Phares](#-projets-phares)
 - [📈 Mes Projets à l'École 42 et Leurs Notes](#-mes-projets-à-lécole-42-et-leurs-notes)
-- [📖 Explorer Plus](#-explorer-plus)
-- [📩 Comment Me Contacter](#-comment-me-contacter)
 
 ## 📚 Apprentissages Clés
 
@@ -55,7 +53,7 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 - **Compétences** : Docker, docker-compose, architecture microservices.
 
 ### 6. Netpractice 🌐
-- **Description** : Série d'exercices pratiques centrés sur la compréhension et la mise en œuvre des principes fondamentaux des réseaux informatiques. Ce projet a renforcé ma capacité à configurer et à résoudre des problèmes de réseau, offrant une base solide en matière de technologies de communication.
+- **Description** : Série d'exercices pratiques centrés sur la compréhension et la mise en œuvre des principes fondamentaux des réseaux informatiques. Ce projet a renforcé ma capacité à configurer et à résoudre des problèmes de réseau, m'offrant une base solide en matière de technologies de communication.
 - **Compétences** : Configuration réseau, diagnostic de problèmes, fondamentaux des protocoles de réseau.
 
 ### 7. push_swap 🔁
@@ -99,3 +97,4 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 ---
 
 N'hésite pas à explorer les répertoires de chaque projet pour plus de détails sur mon travail et les compétences développées. Merci de votre intérêt pour mon parcours à l'école 42!
+
