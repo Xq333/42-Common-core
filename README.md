@@ -49,15 +49,15 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 | Projet            | Note                               |
 |-------------------|------------------------------------|
 | ft_transcendence  | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3446651)              |
-| Exam Rank 06      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3503649)              |
+| exam Rank 06      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3503649)              |
 | ft_irc            | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3391008)              |
-| Inception         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3327033)              |
+| inception         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3327033)              |
 | CPP Module 09     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3371495)              |
 | CPP Module 08     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3371408)              |
 | CPP Module 07     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3344538)              |
 | CPP Module 06     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3341855)              |
 | CPP Module 05     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3327029)              |
-| Exam Rank 05      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3501636)              |
+| exam Rank 05      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3501636)              |
 | CPP Module 04     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3317376)              |
 | CPP Module 03     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3237091)              |
 | CPP Module 02     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3234151)              |
@@ -65,17 +65,17 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 | CPP Module 00     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116102)              |
 | cub3D             | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116097)              |
 | netpractice       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116098)              |
-| Exam Rank 04      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3498002)              |
+| exam Rank 04      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3498002)              |
 | minishell         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939864)              |
 | philosophers      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939866)              |
-| Exam Rank 03      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2944317)              |
-| Push_swap         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895434)              |
+| exam Rank 03      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2944317)              |
+| push_swap         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895434)              |
 | fract-ol          | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2916953)              |
 | minitalk          | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895432)              |
-| Exam Rank 02      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895430)              |
+| exam Rank 02      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895430)              |
 | getnextline       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2879555)              |
 | ft_printf         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2878963)              |
-| Born2BeRoot       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2884262)              |
+| born2beroot       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2884262)              |
 | libft             | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2869409)              |
 
 ---
