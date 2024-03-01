@@ -99,4 +99,3 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 ---
 
 N'hésite pas à explorer les répertoires de chaque projet pour plus de détails sur mon travail et les compétences développées. Merci de votre intérêt pour mon parcours à l'école 42!
-
