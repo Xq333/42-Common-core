@@ -38,7 +38,7 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 - **Description** : Réalisation d'un shell Unix minimaliste. Ce projet m'a permis de comprendre en profondeur le fonctionnement des interpréteurs de commandes et la gestion des processus sous Unix.
 - **Compétences** : Programmation en C, gestion de processus, interprétation de commandes.
 
-### 2. philosophers 🍽
+### 2. Philosophers 🍽
 - **Description** : Implémentation du problème classique du dîner des philosophes en utilisant le multithreading et la synchronisation pour éviter les deadlocks et les race conditions.
 - **Compétences** : Multithreading, synchronisation, problèmes de concurrence.
 
@@ -50,11 +50,11 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 - **Description** : Création d'un serveur IRC from scratch, ce qui m'a permis de plonger dans les détails de la programmation réseau et de la gestion de multiples clients en simultané.
 - **Compétences** : Programmation réseau, gestion de clients, protocoles de communication.
 
-### 5. inception 🏗
+### 5. Inception 🏗
 - **Description** : Mise en place d'une architecture microservices à l'aide de conteneurs Docker, simulant une application web complexe et ses dépendances.
 - **Compétences** : Docker, docker-compose, architecture microservices.
 
-### 6. netpractice 🌐
+### 6. Netpractice 🌐
 - **Description** : Série d'exercices pratiques centrés sur la compréhension et la mise en œuvre des principes fondamentaux des réseaux informatiques. Ce projet a renforcé ma capacité à configurer et à résoudre des problèmes de réseau, offrant une base solide en matière de technologies de communication.
 - **Compétences** : Configuration réseau, diagnostic de problèmes, fondamentaux des protocoles de réseau.
 
@@ -69,7 +69,7 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 | ft_transcendence  | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3446651)              |
 | exam Rank 06      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3503649)              |
 | ft_irc            | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3391008)              |
-| inception         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3327033)              |
+| Inception         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3327033)              |
 | CPP Module 09     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3371495)              |
 | CPP Module 08     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3371408)              |
 | CPP Module 07     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3344538)              |
@@ -82,10 +82,10 @@ Voici une sélection de mes projets préférés réalisés à l'école 42, illus
 | CPP Module 01     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3211375)              |
 | CPP Module 00     | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116102)              |
 | cub3D             | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116097)              |
-| netpractice       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116098)              |
+| Netpractice       | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3116098)              |
 | exam Rank 04      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/3498002)              |
 | minishell         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939864)              |
-| philosophers      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939866)              |
+| Philosophers      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2939866)              |
 | exam Rank 03      | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2944317)              |
 | push_swap         | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2895434)              |
 | fract-ol          | ![Note](https://badge42.coday.fr/api/v2/clt8suien1465601p4g6r4lu8o/project/2916953)              |
