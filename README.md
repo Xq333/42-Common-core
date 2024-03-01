@@ -1,6 +1,6 @@
 # 🚀 Mon Parcours à l'École 42
 
-Bienvenue sur mon dépôt GitHub où je partage les projets que j'ai réalisés pendant mon temps à l'école 42. Ce parcours a été une aventure incroyable, m'offrant une profonde compréhension de la programmation, du développement logiciel, et de la résolution de problèmes complexes.
+Bienvenue sur mon dépôt GitHub où je partage les projets que j'ai réalisés pendant mon temps à l'école 42. Ce parcours a été une aventure incroyable, m'offrant une profonde compréhension de la programmation, du développement logiciel et de la résolution de problèmes complexes.
 
 ## Table des Matières
 - [🚀 Mon Parcours à l'École 42](#-mon-parcours-à-lécole-42)
